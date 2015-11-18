@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1">
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.dataTables.min.js"></script>
+<script src="js/dataTables.bootstrap.min.js"></script>
+<script src="js/dataTables.plugin.js"></script>
+<script src="js/common.js"></script>
+<script src="js/jQuery.js"></script>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/dataTables.bootstrap.min.css" rel="stylesheet">
+<link href="css/jQuery.css" rel="stylesheet">
+<title>JsResidensyApp</title>
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#navbar-menu">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a href="dashboard.html" class="navbar-brand">JsResidensyApp<span
+					class="glyphicon glyphicon-home"></span>
+				</a>
+			</div>
+			<div class="collapse navbar-collapse" id="navbar-menu">
+				<ul class="nav navbar-nav">
+					<li><a href="jQuery.html">jQuery</a></li>
+					<li><a href="AngularJS.html">AngularJS</a></li>
+				</ul>
+				<button type="button" class="btn btn-default navbar-btn navbar-right">
+					ログアウト<span class="glyphicon glyphicon-log-out"></span>
+				</button>
+			</div>
+		</div>
+	</nav>
+	<br><br><br>
+	<div class="loading"></div>
+	<form onsubmit="return false;">
+		<section class="container">
+			<div class="row">
+				<label class="control-label">ソフトウェア製品を検索してください *</label>
+				<div class="col-md-12 col-sm-12">
+				<div class="col-md-11 col-sm-11">
+					<input type="text" id="searchProductName" class="form-control" name="productName" maxlength="1000" required="required" placeholder="製品名を入力してください">
+				</div>
+				<div class="col-md-1 col-sm-1">
+					<button type="submit" id="search" class="btn btn-info pull-right"><span class="glyphicon glyphicon-pencil"></span>検索</button>
+				</div>
+				</div>
+			</div>
+		</section>
+	</form>
+	<br><br>
+	<section class="container" id="resultArea">
+		<div class="row">
+				<div class="col-md-12 col-sm-12">
+					<label class="control-label">製品検索結果</label>
+					<table id="resultTable">
+						<tbody>
+						</tbody>
+					</table>
+				</div>
+		</div>
+	</section>
+</body>
+</html>
